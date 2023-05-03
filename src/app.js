@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import './styles/styles.scss';
 import '../node_modules/normalize.css'
 
@@ -29,7 +29,7 @@ const HelpExpensePage = () =>(
 
 const NotFoundPage = () =>(
     <div>
-        404!
+        404 - <Link to='/'>Go Home</Link>
     </div>
 )
 
