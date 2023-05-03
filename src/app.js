@@ -33,8 +33,20 @@ const NotFoundPage = () =>(
     </div>
 )
 
+const Header = () => (
+    <header>
+        <h1>Expensify</h1>
+        <Link to='/'>To Home Page</Link>
+        <Link to='/create'>To Create Page</Link>
+        <Link to='/edit'>To Edit Page</Link>
+        <Link to='/help'>To Help Page</Link>
+    </header>
+)
+
 const routes = (
     <BrowserRouter>
+    <div>
+    <Header/>
     <Switch> 
         <Route path="/" component={ExpenseDashBoardPage} exact={true} />
         <Route path="/create" component={AddExpensePage} />
@@ -42,6 +54,7 @@ const routes = (
         <Route path="/help" component={HelpExpensePage} />
         <Route component={NotFoundPage} />
     </Switch>
+    </div>
     </BrowserRouter>
 );
 
