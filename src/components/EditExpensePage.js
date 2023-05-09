@@ -4,8 +4,9 @@ const EditExpensePage = (props) =>{
     console.log(props)
     return(
     <div>
-    Editing the data with id {props.match.path}
+    Editing the data with id {props.match.params.page}
     </div>
-)}
+);
+};
 
 export default EditExpensePage;
