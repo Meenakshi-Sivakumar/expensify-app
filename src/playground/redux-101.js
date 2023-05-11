@@ -19,6 +19,11 @@ const store = createStore((state= {count: 0},action)=> {
     }
 });
 
+//watches and executes if store changes.
+store.subscribe (()=> 
+console.log(store.getState())
+)
+
 store.dispatch({
     type: 'INCREMENT'
 });
@@ -30,4 +35,3 @@ store.dispatch({
 store.dispatch({
     type: 'RESET'
 })
-console.log(store.getState());
