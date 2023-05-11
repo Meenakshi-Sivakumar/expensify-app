@@ -22,11 +22,12 @@ const store = createStore((state= {count: 0},action)=> {
 store.dispatch({
     type: 'INCREMENT'
 });
+
 store.dispatch({
     type: 'DECREMENT'
 })
+
 store.dispatch({
     type: 'RESET'
 })
-
 console.log(store.getState());
