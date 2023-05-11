@@ -1,6 +1,10 @@
 import {createStore} from 'redux';
 
-const store = createStore((state= {count: 0},action)=> {
+//Reducers 
+//they are pure functions.
+//never change state or action.
+
+const reducer = (state= {count: 0},action)=> {
     switch(action.type) {
         case 'INCREMENT':
             const incrementBy = typeof action.incrementBy === 'number' ? action.incrementBy: 1;
@@ -19,7 +23,9 @@ const store = createStore((state= {count: 0},action)=> {
         default: 
             return state;
     }
-});
+}
+
+const store = createStore(reducer);
 
 //watches and executes if store changes.
 //the return value called will unsubscribe the store(e.i. stop watching it)
