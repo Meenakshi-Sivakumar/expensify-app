@@ -25,6 +25,6 @@ if (city && temperature) {
 
 const address = ['1233 sunddhara ganapathy street', 'ammapet', 'salem', '636003'];
 
-const [ , localArea, city = 'Coimbatore'] = address;
+const [ , localArea, town = 'Coimbatore'] = address;
 
-console.log(`you live in ${localArea} in ${city}`)
+console.log(`you live in ${localArea} in ${town}`)
