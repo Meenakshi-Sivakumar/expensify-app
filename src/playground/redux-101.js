@@ -20,13 +20,16 @@ const store = createStore((state= {count: 0},action)=> {
 });
 
 //watches and executes if store changes.
-store.subscribe (()=> 
+//the return value called will unsubscribe the store(e.i. stop watching it)
+const unsubscribe = store.subscribe (()=> 
 console.log(store.getState())
 )
 
 store.dispatch({
     type: 'INCREMENT'
 });
+
+unsubscribe();
 
 store.dispatch({
     type: 'DECREMENT'
