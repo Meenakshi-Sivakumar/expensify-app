@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 import React from 'react';
 
+
 const Header = () => (
     <header>
         <h1>Expensify</h1>
