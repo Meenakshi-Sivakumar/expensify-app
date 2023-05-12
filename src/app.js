@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import './styles/styles.scss';
 import '../node_modules/normalize.css'
 import './routers/AppRouter';
@@ -17,5 +18,13 @@ store.dispatch(setTextFilter('water'));
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
-ReactDOM.render(<AppRouter />,document.getElementById('app')); 
+console.log(visibleExpenses);  
+
+//Provider component
+const jsx = (
+    <Provider store= {store}>
+        <AppRouter />
+    </Provider>
+);
+
+ReactDOM.render(jsx,document.getElementById('app')); 
